@@ -39,3 +39,44 @@ var courseObj = new Course("Man01", "hoang man", 21);
 courseObj.showCourceInfo();
 var courseMobieObj = new CourseMobie("Man02", "Khong", 22, "Nono");
 courseMobieObj.showCourceInfo();
+var showInfo = /** @class */ (function () {
+    function showInfo(id, name, price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
+    showInfo.prototype.showProductInfo = function () {
+        console.log(this.id + " - " + this.name + " - " + this.price);
+    };
+    return showInfo;
+}());
+var product1 = new showInfo("1", "shoo", 2);
+var product2 = new showInfo(2, 2, 2);
+var product3 = new showInfo(3, 2, true);
+product1.showProductInfo();
+product2.showProductInfo();
+product3.showProductInfo();
+var Cacu = /** @class */ (function () {
+    function Cacu(numb1, numb2) {
+        this.numb1 = numb1;
+        this.numb2 = numb2;
+    }
+    Cacu.prototype.tongg = function () {
+        return this.numb1 + this.numb2;
+    };
+    Cacu.prototype.truu = function () {
+        return this.numb1 - this.numb2;
+    };
+    Cacu.prototype.nhann = function () {
+        return this.numb1 * this.numb2;
+    };
+    Cacu.prototype.chiaa = function () {
+        return this.numb1 / this.numb2;
+    };
+    return Cacu;
+}());
+var a = new Cacu(20, 10);
+console.log("tong la" + a.tongg());
+console.log("tru la" + a.truu());
+console.log("nhan la" + a.nhann());
+console.log("chia la" + a.chiaa());

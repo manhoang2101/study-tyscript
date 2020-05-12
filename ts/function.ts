@@ -37,7 +37,7 @@ console.log("tong so le la " + tong_so_le(mang));
 
 // tìm số lớn nhất và nhỏ nhất trong mảng
 
-var mang = [1,2,3,4,5,6,7,8,9];
+var mang:number[] = [1,2,3,4,5,6,7,8,9];
 function max(mang){
     var n = mang.length;
     var max = mang[0];
@@ -57,3 +57,4 @@ function min(mang){
 }
 console.log("so lon nhat trong mang la: " + max(mang));
 console.log("so nho nhat trong mang la: " + min(mang));
+
